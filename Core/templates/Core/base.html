@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+    <!-- HEAD TEMPLATE  -->
+        {% include "Core/head.html" %}
+    <!-- END HEAD TEMPLATE  -->
+
+    
+    <!-- NAV TEMPLATE  -->
+        {% include "Core/nav.html" %}
+    <!-- END NAV TEMPLATE  -->
+
+<body>
+
+    <!-- MAIN TEMPLATE  -->
+        {% block content %}
+        {% endblock %}   
+    <!-- END MAIN TEMPLATE  -->
+    
+
+    <!-- FOOTER TEMPLATE  -->
+        {% include "Core/footer.html" %}
+    <!-- END FOOTER TEMPLATE  -->
+</body>
+
+</html>

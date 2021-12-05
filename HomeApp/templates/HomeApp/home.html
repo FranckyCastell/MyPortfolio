@@ -1,0 +1,141 @@
+{% extends "Core/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <!-- About-->
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-0">
+                Francesc
+                <span class="text-primary">Castell</span>
+            </h1>
+            <div class="subheading mb-5">
+                Menorca · Islas Baleares, España · (+34) 628-667-060
+                <a href="mailto:name@email.com">francesc.castell8@gmail.com</a>
+            </div>
+            <p class="lead mb-5">Técnico Superior en Redes, con conocimientos elevados en Ciberseguridad, además de
+                experiencia comprobada en redes y conectividad.</p>
+            <div class="social-icons">
+                <a rel="LinkedIn" aria-label="LinkedIn" class="social-icon"
+                    href="https://es.linkedin.com/in/francesc-castell-447635168?trk=people-guest_people_search-card"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a rel="GitHub" aria-label="GitHub" class="social-icon" href="https://github.com/FranckyCastell"><i
+                        class="fab fa-github"></i></a>
+                <a rel="Instagram" aria-label="Instagram" class="social-icon" href="https://www.instagram.com/francky_castell"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0" />
+
+    <!-- Experience-->
+    <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Experience</h2>
+
+            {% for experience in experiences %}
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">{{experience.title}}</h3>
+                    <div class="subheading mb-3">{{experience.company}}</div>
+                    <p>{{experience.description}}</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">{{experience.dateStart}} -
+                        {{experience.dateEnd}}</span></div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </section>
+
+    <hr class="m-0" />
+
+    <!-- Education-->
+    <section class="resume-section" id="education">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Education</h2>
+
+            {% for education in educations %}
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">{{education.title}}</h3>
+                    <div class="subheading mb-3">{{education.school}}</div>
+                    <div>{{education.description}}</div>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">{{education.dateStart}} -
+                        {{education.dateEnd}}</span></div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </section>
+
+    <hr class="m-0" />
+
+    <!-- Skills-->
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Skills</h2>
+            <div class="subheading mb-3">Programming Languages & Tools</div>
+            <ul class="list-inline dev-icons">
+                <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
+                <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                <li class="list-inline-item"><i class="fab fa-git"></i></li>
+                <li class="list-inline-item"><i class="fab fa-docker"></i></li>
+                <li class="list-inline-item"><i class="fas fa-database"></i></li>
+                <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+            </ul>
+            <div class="subheading mb-3">Workflow</div>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    FrontEnd (HTML5, CSS3, JS)
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    BackEnd (Python - Django)
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Organized structure
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Fast development
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- Awards-->
+    <section class="resume-section" id="awards">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Awards & Certifications</h2>
+            <ul class="fa-ul mb-0">
+
+                {% for award in awards %}
+
+                <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    {{award.title}} - {{award.description}}
+                </li>
+
+                {% endfor %}
+
+            </ul>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
