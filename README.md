@@ -21,7 +21,7 @@ pip3
 _Clonando el repositorio_
 
 ```
-git clone https://github.com/FranckyCastell/My_Portfolio.git
+git clone https://github.com/FranckyCastell/MyPortfolio.git
 ```
 
 _Instalando las Dependencias_
